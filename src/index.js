@@ -9,10 +9,8 @@ function configureTheme( position ) {
     // Current time in Date() format.
     let currentTime = new Date( position.timestamp );
   
-    // If local time is between 6PM - 6AM, 18->0 || 0-6.
+    // If local time is between 6PM and 6AM
     if ( currentTime.getHours() >= 18 || currentTime.getHours() <= 6) {
-        console.log(`Switching to darkmode...`);
-
         chrome.tabs.onActivated.addListener( tab => {
             let jsOptions = {
                 file: "src/style.js",
@@ -21,17 +19,15 @@ function configureTheme( position ) {
                 runAt: "document_idle"
             }
         
-            chrome.tabs.executeScript(jsOptions)
+            // Inject javascript on the active tab
+            chrome.tabs.executeScript(tab.tabId, jsOptions)
         });
-    }
-    else {
-        console.log(`Switching to lightmode...`);
     }
 }
 
 /**
- * TODO
- * @param { Object } error - TODO
+ * Log error output
+ * @param { Object } error - Error response
  */
 function handleError( error ) {
     console.error( error );

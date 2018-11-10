@@ -1,13 +1,15 @@
 {
     "name": "Ambient Dark Mode",
-    "version": "0.2.0",
-    "description": "Switch to a dark theme based on the currently detected ambient light.",
-    "permissions": ["geolocation", "<all_urls>", "tabs"],
+    "short_name": "adm",
+    "version": "0.2.2",
+    "description": "Automatically switches to a dark theme based on your local time of day.",
+    "permissions": ["geolocation", "<all_urls>", "activeTab"],
     "background": {
       "scripts": ["src/index.js"],
       "persistent": false
     },
     "browser_action": {},
     "web_accessible_resources" : [ "src/index.js", "src/style.js" ],
+    "icons": { "16": "src/assets/img/icon16.png", "48": "src/assets/img/icon64.png", "128": "src/assets/img/icon128.png" },
     "manifest_version": 2
   }
