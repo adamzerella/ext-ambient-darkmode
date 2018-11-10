@@ -1,11 +1,13 @@
 {
     "name": "Ambient Dark Mode",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Switch to a dark theme based on the currently detected ambient light.",
-    "permissions": ["geolocation", "tabs"],
+    "permissions": ["geolocation", "<all_urls>", "tabs"],
     "background": {
       "scripts": ["src/index.js"],
       "persistent": false
     },
+    "browser_action": {},
+    "web_accessible_resources" : [ "src/index.js", "src/style.js" ],
     "manifest_version": 2
   }
