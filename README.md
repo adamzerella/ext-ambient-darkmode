@@ -1,5 +1,7 @@
 # ext-ambient-darkmode
 
+Chrome web store: https://chrome.google.com/webstore/detail/ambient-dark-mode/ebbpgmigoakmebiamelbleggninjkjbg
+
 Browser extension that automatically switches to a dark theme based on your local time of day. Between the hours of `6PM - 6AM` this extension will switch your browsing experience to a dark theme.
 
 [![GitHub stars](https://img.shields.io/github/stars/adamzerella/ext-ambient-darkmode.svg)](https://github.com/adamzerella/ext-ambient-darkmode/stargazers)
